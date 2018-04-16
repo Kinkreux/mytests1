@@ -1,9 +1,5 @@
 <?php
 
-$testname_final = str();
-$testnumber = int();
-$testlist_array = array();
-
 $test_username = ($_POST["testname"]);
 
 if(is_file($testname_final)) {
@@ -17,9 +13,9 @@ if (!empty($_FILES)) {
 };
 
 if(is_array($testlist_array)) {
-    array_push($testlist_array[$testname_final] = $test_username);
+    array_push($testlist_array[$testnumber] = $test_username);
 } else {
-    $testlist_array[$testname_final] = $test_username;
+    $testlist_array[$testnumber] = $test_username;
 };
 
 var_dump($testlist_array);
@@ -34,8 +30,8 @@ var_dump($testlist_array);
         <h1>Добро пожаловать на сервис mytests!</h1>
         <p>Здесь вы можете посмотреть список загруженных тестов и открыть нужный тест.</p>
         <ul>Список загруженных тестов:
-            <?php foreach ($testlist_array as $testname_final =>  $test_iusername) : ?>
-            <li><a href="<?php echo $testname_final ?>">Тест "<?php echo $test_username; ?>"</a></li>
+            <?php foreach ($testlist_array as $testnumber =>  $test_iusername) : ?>
+            <li><a href="test.php?<?php echo $testnumber ?>">Тест "<?php echo $test_username; ?>"</a></li>
             <?php endforeach; ?>
         </ul>
         <a href="admin.php">Загрузить еще тест >></a>
