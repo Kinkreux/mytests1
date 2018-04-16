@@ -12,14 +12,14 @@ var_dump($_FILES);
 <body>
 <h1>Добро пожаловать на сервис mytests!</h1>
 <p>Вы можете загрузить файл с тестом в формате .json по следующему шаблону:</p>
-<code>{"problem":
+<code>{"test": {"problem":
             {"question":"Текст вопроса",
             "response":[
                            {"alternative":"Текст варианта ответа"},
-                           {"valid":0/1}
+                           {"valid":true/false}
                            ]
            }
-}           "</code>
+} }           "</code>
 <form enctype="multipart/form-data" action="admin.php" method="post">
     <p>Назовите тест:</p>
     <input type="text" name="testname">

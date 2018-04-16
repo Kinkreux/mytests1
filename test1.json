@@ -1,0 +1,15 @@
+{"test":
+[{"question":"Какое число меньше 3?"},
+  {"response": [
+    {"alternative":["1",true]},
+    {"alternative":["2",true]},
+    {"alternative":["3",false]}
+    ]},
+  {"question":"Сколько ног у паука?"},
+  {"response": [
+    {"alternative":["4",false]},
+    {"alternative":["6",false]},
+    {"alternative":["8",true]},
+    {"alternative":["12",false]}
+  ]}
+]}
